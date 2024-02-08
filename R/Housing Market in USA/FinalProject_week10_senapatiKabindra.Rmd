@@ -1,0 +1,65 @@
+---
+title: "finalProject_week10_SenapatiKabindra"
+output: html_document
+---
+
+# Get the housing data
+```{r}
+knitr::opts_chunk$set(echo = TRUE)
+#library(readr)
+#library(ggplot2)
+#library(knitr)
+#library(tidyverse)
+```
+
+#How to import and clean my data
+```{r}
+library(ggplot2)
+housing_data <- read.csv("data/housing.csv")
+head(housing_data)
+
+```
+#Data Cleansing
+```{r}
+str(housing_data)
+library(ggplot2)
+```
+#What does the final data set look like?
+--housing_data
+
+#What information is not self-evident?
+--longitude,latitude
+
+#What are different ways you could look at this data?
+--How the housing price is corrleatd to age and income
+
+#How do you plan to slice and dice the data?
+```{r}
+library("dplyr")
+glimpse(housing_data)
+filter_data <- filter(housing_data, housing_median_age > 50)
+head(filter_data)
+```
+#How could you summarize your data to answer key questions?
+```{r}
+summary(housing_data)
+```
+#What types of plots and tables will help you to illustrate the findings to your questions?
+```{r}
+br_mean = mean(housing_data$total_bedrooms, na.rm=TRUE)
+br_median = median(housing_data$total_bedrooms, na.rm=TRUE)
+ggplot(housing_data, aes(x = total_bedrooms)) +
+  geom_histogram(bins = 40, color = "black", fill = "blue") +
+  geom_vline(aes(xintercept = br_mean, color = "Mean"), lwd = 1.5) +
+  geom_vline(aes(xintercept = br_median, color = "Median"), lwd = 1.5) +
+  xlab("Total Bedrooms") +
+  ylab("Frequency") +
+  ggtitle("Histogram of Total Bedrooms (noncontinuous variable)") +
+  scale_color_manual(name = "Summary", labels = c("Mean", "Median"), values = c("red", "green"))
+```
+#Do you plan on incorporating any machine learning techniques to answer your research questions? Explain.
+--Yes. creating a linear model using the price , income nd age variables
+
+#Questions for future steps.
+How the model works for the different variables?
+impact of Changing different variables in the model

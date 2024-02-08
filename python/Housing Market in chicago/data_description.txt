@@ -1,0 +1,37 @@
+search_space = [{"classifier": [LogisticRegression()],"classifier_penalty":['l1','l2'],"classifier_c":np.logspace(0,4,10)},
+               {"classifier":[RandomForestClassifier()],"classifier_n_estimators":[10,100,1000],"classifier_max":[1,2,3]}]
+
+search_space = [{"classifier": [LogisticRegression()],"classifier_penalty":['l1','l2'],"classifier_c":np.logspace(0,4,10)}]
+
+search_space = [{"classifier":[KneighborsClassifier()],
+"knn__n_neighbors": [1,2,3,4,5,6,7,8,9,10]}
+{"classifier": [LogisticRegression()],
+"classifier_penalty":['l1','l2'],
+"classifier_c":np.logspace(0,4,10)},
+{"classifier":[RandomForestClassifier()],
+"classifier_n_estimators":[10,100,1000],
+"classifier_max":[1,2,3]}]
+
+[{"classifier":[KNeighborsClassifier()],"classifier__n_neighbors": [1,2,3,4,5,6,7,8,9,10]},
+                 {"classifier": [LogisticRegression()],
+                  "classifier_penalty":['l1','l2'],
+                  "classifier_C":np.logspace(0,4,10)},
+                 {"classifier":[RandomForestClassifier()],
+                  "classifier_n_estimators":[10,100,1000],
+                  "classifier_max":[1,2,3]}]
+
+stimator__steps
+estimator__verbose
+estimator__standardizer
+estimator__classifier
+estimator__standardizer__clip
+estimator__standardizer__copy
+estimator__standardizer__feature_range
+estimator__classifier__algorithm
+estimator__classifier__leaf_size
+estimator__classifier__metric
+estimator__classifier__metric_params
+estimator__classifier__n_jobs
+estimator__classifier__n_neighbors
+estimator__classifier__p
+estimator__classifier__weights

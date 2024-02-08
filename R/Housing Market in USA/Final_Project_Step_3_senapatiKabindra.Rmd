@@ -1,0 +1,54 @@
+---
+title: "final_project_step_3"
+output: html_document
+---
+
+#Introduction.
+
+---
+The data i worked on was on Housing price prediction for a certain area . I data i used is for California market based on a number of possible location-based predictors, including latitude, longitude, and information about other houses within a particular block.
+The goal of the project is to create the model that can best predict home prices in California given reasonable test/train splits in the data.
+---
+
+#The problem statement you addressed. 
+
+---
+Based on the Model, this will be used in predicting the housing price in different areas and can be used in decision making purpose.   
+
+---
+
+#How you addressed this problem statement
+
+---
+I used the housing dataset for california market and used different variables to create a test model using linear model.
+
+---
+
+#Analysis.
+
+---
+Initial exploration of the data showed us that there were a few steps we needed to take to make the data more useable. Firstly, we changed the categorical variable ocean_proximity from text-based to a factor variable.
+I also used filter_data to filter the dataset to see the buying pattern for a specific age group
+Taking  ocean_proximity and Age into account, i see that the level has a very low count compared to the other levels in comparision to Age.
+---
+
+#Implications. 
+
+---
+Looking at the structure of the dataset after cleaning the data, we see that besides the one factor variable ocean_proximity, we have nine numeric variables, three of which are continuous (longitude, latitude, and median_income) and six of which are discrete (housing_median_age, total_rooms, total_bedrooms, population, households, and median_house_value).
+The Prediction varies with the change in variable inputs and the volume of test data.
+---
+
+#Limitations.
+
+---
+The current dataset is not enough for the current market situation and doesnt include the important factors such as income and interest rate. So i would say Data is the biggest limitation and the current midel should not be used for the house price prediction.
+
+---
+
+#Concluding Remarks
+
+---
+The project is definitely gave me an understanding of using the models in the data science projects and how we can address the problems and predict the future outcome using the model.
+
+---

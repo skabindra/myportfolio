@@ -1,0 +1,68 @@
+---
+title: "Untitled"
+author: "week12_assignment"
+date: "3/5/2022"
+output: html_document
+---
+
+```{r}
+setwd("/Users/snigdha/Documents/dsc520")
+binary_data <- read.csv('data/binary-classifier-data.csv')
+head(binary_data)
+trinary_data <- read.csv('data/trinary-classifier-data.csv')
+head(trinary_data)
+```
+
+#Plot the data from each dataset using a scatter plot.
+#for binary_data
+```{r}
+plot(x = binary_data$x,y = binary_data$y,
+     xlab = "x",
+     ylab = "y",
+     main = "x vs y"
+)
+```
+#for trinary_data
+```{r}
+plot(x = trinary_data$x,y = trinary_data$y,
+     xlab = "x",
+     ylab = "y",
+     main = "x vs y"
+)
+```
+#Rgresssion Model
+```{r}
+trinary_data_lm <-  lm(trinary_data$x ~ y + label, data = trinary_data)
+trinary_data_lm
+summary(trinary_data_lm)
+```
+#for binary_data Model
+```{r}
+binary_data_lm <-  lm(binary_data$x ~ y + label, data = binary_data)
+binary_data_lm
+summary(binary_data_lm)
+```
+
+#Clustering
+```{r}
+library("ggplot2")
+library(dplyr)
+library("ggfortify")
+```
+# K-means
+```{r}
+kmean <- kmeans(trinary_data, 2)
+kmean$centers
+autoplot(kmean, trinary_data, frame = TRUE)
+kmean <- kmeans(binary_data, 2)
+kmean$centers
+```
+```{r}
+set.seed(20)
+clusters <- kmeans(trinary_data, 5)
+str(clusters)
+
+set.seed(20)
+clusters <- kmeans(binary_data, 12)
+str(clusters)
+```
