@@ -1,16 +1,19 @@
 Below my portfolio of projects .
 
-Hadoop : It's all about learning hadoop technology.
+Hadoop
+ 1. It's all about learning hadoop technology.
 
 Python:
- - Airline Trend Analysis
- - Brewery Data Analysis
- - Data Wrangliing in python
- - Analysis of Heart Disease Prediction Data
- - House Price prediction in Miami
- - Housing market in chicago
- - Weather Information by city
+ 2: Airline Trend Analysis
+ 3: Brewery Data Analysis
+ 4: Data Wrangliing in python
+ 5: Analysis of Heart Disease Prediction Data
+ 6: House Price prediction in Miami
+ 7: Housing market in chicago
+ 8: Weather Information by city
 
-R - Housing Market in USA
+R 
+ 9: Housing Market in USA
 
-Visualization : Airline Safety
+Visualization 
+ 10. Airline Safety
